@@ -87,7 +87,7 @@ class RangeSliderThumbLayer: CALayer {
 @IBDesignable
 public class RangeSlider: UIControl {
     
-    @IBInspectable var maximumValue: Double = 1.0 {
+    @IBInspectable public var maximumValue: Double = 1.0 {
         willSet(newValue) {
             assert(newValue > minimumValue, "RangeSlider: maximumValue should be greater than minimumValue")
         }
@@ -96,7 +96,7 @@ public class RangeSlider: UIControl {
         }
     }
 
-    @IBInspectable var minimumValue: Double = 0.0 {
+    @IBInspectable public var minimumValue: Double = 0.0 {
         willSet(newValue) {
             assert(newValue < maximumValue, "RangeSlider: minimumValue should be lower than maximumValue")
         }
@@ -105,7 +105,7 @@ public class RangeSlider: UIControl {
         }
     }
 
-    @IBInspectable var lowerValue: Double = 0.2 {
+    @IBInspectable public var lowerValue: Double = 0.2 {
         didSet {
             if lowerValue < minimumValue {
                 lowerValue = minimumValue
@@ -114,7 +114,7 @@ public class RangeSlider: UIControl {
         }
     }
     
-    @IBInspectable var upperValue: Double = 0.8 {
+    @IBInspectable public var upperValue: Double = 0.8 {
         didSet {
             if upperValue > maximumValue {
                 upperValue = maximumValue
@@ -127,40 +127,40 @@ public class RangeSlider: UIControl {
         return 0.5 * Double(thumbWidth) * (maximumValue - minimumValue) / Double(bounds.width)
     }
     
-    @IBInspectable var trackTintColor: UIColor = UIColor(white: 0.9, alpha: 1.0) {
+    @IBInspectable public var trackTintColor: UIColor = UIColor(white: 0.9, alpha: 1.0) {
         didSet {
             trackLayer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable var trackHighlightTintColor: UIColor = UIColor(red: 0.0, green: 0.45, blue: 0.94, alpha: 1.0) {
+    @IBInspectable public var trackHighlightTintColor: UIColor = UIColor(red: 0.0, green: 0.45, blue: 0.94, alpha: 1.0) {
         didSet {
             trackLayer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable var thumbTintColor: UIColor = UIColor.white {
+    @IBInspectable public var thumbTintColor: UIColor = UIColor.white {
         didSet {
             lowerThumbLayer.setNeedsDisplay()
             upperThumbLayer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable var thumbBorderColor: UIColor = UIColor.gray {
+    @IBInspectable public var thumbBorderColor: UIColor = UIColor.gray {
         didSet {
             lowerThumbLayer.strokeColor = thumbBorderColor
             upperThumbLayer.strokeColor = thumbBorderColor
         }
     }
     
-    @IBInspectable var thumbBorderWidth: CGFloat = 0.5 {
+    @IBInspectable public var thumbBorderWidth: CGFloat = 0.5 {
         didSet {
             lowerThumbLayer.lineWidth = thumbBorderWidth
             upperThumbLayer.lineWidth = thumbBorderWidth
         }
     }
     
-    @IBInspectable var curvaceousness: CGFloat = 1.0 {
+    @IBInspectable public var curvaceousness: CGFloat = 1.0 {
         didSet {
             if curvaceousness < 0.0 {
                 curvaceousness = 0.0
