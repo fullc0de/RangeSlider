@@ -89,7 +89,7 @@ public class RangeSlider: UIControl {
     
     @IBInspectable public var maximumValue: Double = 1.0 {
         willSet(newValue) {
-            assert(newValue > minimumValue, "RangeSlider: maximumValue should be greater than minimumValue")
+            //assert(newValue > minimumValue, "RangeSlider: maximumValue should be greater than minimumValue")
         }
         didSet {
             updateLayerFrames()
@@ -98,7 +98,7 @@ public class RangeSlider: UIControl {
 
     @IBInspectable public var minimumValue: Double = 0.0 {
         willSet(newValue) {
-            assert(newValue < maximumValue, "RangeSlider: minimumValue should be lower than maximumValue")
+            //assert(newValue < maximumValue, "RangeSlider: minimumValue should be lower than maximumValue")
         }
         didSet {
             updateLayerFrames()
