@@ -139,6 +139,12 @@ public class RangeSlider: UIControl {
         }
     }
     
+    @IBInspectable public var trackHeight: CGFloat = 0 {
+        didSet {
+            updateLayerFrames()
+        }
+    }
+    
     @IBInspectable public var thumbTintColor: UIColor = UIColor.white {
         didSet {
             lowerThumbLayer.setNeedsDisplay()
@@ -227,7 +233,15 @@ public class RangeSlider: UIControl {
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         
-        trackLayer.frame = bounds.insetBy(dx: 0.0, dy: bounds.height/3)
+        if trackHeight == 0.0 {
+            trackLayer.frame = bounds.insetBy(dx: 0.0, dy: bounds.height/3)
+        } else {
+            var trackFrame: CGRect = .zero
+            trackFrame.origin.y = (bounds.size.height - trackHeight) / 2.0
+            trackFrame.size.height = trackHeight
+            trackFrame.size.width = bounds.size.width
+            trackLayer.frame = trackFrame
+        }
         trackLayer.setNeedsDisplay()
         
         let lowerThumbCenter = CGFloat(positionForValue(lowerValue))

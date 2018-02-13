@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        rangeSlider1.trackHeight = 20.0
+        
         rangeSlider2.trackHighlightTintColor = UIColor.red
         rangeSlider2.curvaceousness = 0.0
         
