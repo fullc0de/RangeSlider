@@ -1,9 +1,9 @@
 # RangeSlider
 
-[![CI Status](https://img.shields.io/travis/warchimede/RangeSlider.svg?style=flat)](https://travis-ci.org/warchimede/RangeSlider)
-[![License](https://img.shields.io/cocoapods/l/CellAnimator.svg?style=flat)](http://cocoapods.org/pods/CellAnimator)
-[![Platform](https://img.shields.io/cocoapods/p/CellAnimator.svg?style=flat)](http://cocoapods.org/pods/CellAnimator)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+**[NOTICE from @fullc0de]**  
+The original repo seems to be abondoned. However, I will maintain my forked repo later on because it is still used in my project. 
+
 
 ## Summary
 A simple range slider made in Swift.
