@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C3917101BA4A83600515C54"
-               BuildableName = "RangeSlider.app"
+               BlueprintIdentifier = "RangeSlider::RangeSlider"
+               BuildableName = "RangeSlider.framework"
                BlueprintName = "RangeSlider"
                ReferencedContainer = "container:RangeSlider.xcodeproj">
             </BuildableReference>
